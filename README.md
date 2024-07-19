@@ -65,15 +65,12 @@ systemctl status ts3server
 #### if you have in the ouput Active: active (running) your server is ready!
 ```
 iptables -A INPUT -p udp --dport 9987 -j ACCEPT
-
 iptables -A INPUT -p udp --sport 9987 -j ACCEPT
-
 iptables -A INPUT -p tcp --dport 30033 -j ACCEPT
-
 iptables -A INPUT -p tcp --sport 30033 -j ACCEPT
-
 iptables -A INPUT -p tcp --dport 10011 -j ACCEPT
-
 iptables -A INPUT -p tcp --sport 10011 -j ACCEPT
+iptables -A INPUT -p tcp --dport 41144 -j ACCEPT
+iptables -A INPUT -p tcp --sport 41144 -j ACCEPT
 ```
 #### Enjoy your server!
