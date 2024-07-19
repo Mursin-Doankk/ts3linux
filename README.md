@@ -1,11 +1,11 @@
 ##Install TeamSpeak3 server on Ubuntu server on VPS or dedicated server. Learn how to create your own autostart script for your TeamSpeak server.
 
 ##Run as root those commands to update and upgrade all installed packages on your server:
-
+```
 apt-get update
 apt-get upgrade
 apt-get dist-upgrade
-
+```
 ##Create a new user for your Teamspeak3 server (press ENTER for all questions):
 
 adduser --disabled-login teamspeak
