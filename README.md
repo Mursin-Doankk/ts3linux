@@ -16,13 +16,13 @@ cd /home/teamspeak/; su teamspeak
 ```
 #### Download and extract the last version:
 ```
-wget https://github.com/Mursin-Doankk/ts3linux/raw/main/teamspeak3-server_linux_amd64-3.0.13.8.tar.bz2
-tar xvfj teamspeak3-server_linux_amd64-3.0.13.8.tar.bz2
+wget https://github.com/Mursin-Doankk/ts3linux/raw/main/teamspeak3-server_linux_amd64-3.13.7.tar.bz2
+tar xvfj teamspeak3-server_linux_amd64-3.13.7.tar.bz2
 cd teamspeak3-server_linux_amd64
 cp * -R /home/teamspeak
 cd ..
 rm -r teamspeak3-server_linux_amd64
-rm -f teamspeak3-server_linux_amd64-3.0.13.8.tar.bz2
+rm -f teamspeak3-server_linux_amd64-3.13.7.tar.bz2
 ```
 #### Start your server for the first time (save login details and secret key to claim the server in TeamSpeak app)
 ```
