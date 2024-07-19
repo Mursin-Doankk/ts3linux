@@ -1,3 +1,4 @@
+<h1 align='center'>TeamSpeak 3 Server Installer</h1>
 ##Install TeamSpeak3 server on Ubuntu server on VPS or dedicated server. Learn how to create your own autostart script for your TeamSpeak server.
 
 ##Run as root those commands to update and upgrade all installed packages on your server:
