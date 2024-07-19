@@ -1,21 +1,21 @@
 <h1 align='center'>TeamSpeak 3 Server Installer</h1>
-##Install TeamSpeak3 server on Ubuntu server on VPS or dedicated server. Learn how to create your own autostart script for your TeamSpeak server.
+####Install TeamSpeak3 server on Ubuntu server on VPS or dedicated server. Learn how to create your own autostart script for your TeamSpeak server.
 
-##Run as root those commands to update and upgrade all installed packages on your server:
+####Run as root those commands to update and upgrade all installed packages on your server:
 ```
 apt-get update
 apt-get upgrade
 apt-get dist-upgrade
 ```
-##Create a new user for your Teamspeak3 server (press ENTER for all questions):
+####Create a new user for your Teamspeak3 server (press ENTER for all questions):
 ```
 adduser --disabled-login teamspeak
 ```
-##Login as teamspeak user:
+####Login as teamspeak user:
 ```
 cd /home/teamspeak/; su teamspeak
 ```
-##Download and extract the last version:
+####Download and extract the last version:
 ```
 wget https://github.com/Mursin-Doankk/ts3linux/raw/main/teamspeak3-server_linux_amd64-3.0.13.8.tar.bz2
 tar xvfj teamspeak3-server_linux_amd64-3.0.13.8.tar.bz2
@@ -29,13 +29,13 @@ rm -f teamspeak3-server_linux_amd64-3.0.13.8.tar.bz2
 ```
 ./ts3server_startscript.sh start
 ```
-##To stop the script press CTRL+C
+####To stop the script press CTRL+C
 
-##Now let's create the start script:
+####Now let's create the start script:
 ```
 nano /lib/systemd/system/ts3server.service
 ```
-##add in the file:
+####add in the file:
 ```
 [Unit]
 Description=Teamspeak Service
@@ -53,17 +53,17 @@ RestartSec=15
 [Install]
 WantedBy=multi-user.target
 ```
-##save the file  CTRL and X together, then Press Y).
+####save the file  CTRL and X together, then Press Y).
 
-##To enable it run at server boot:
+####To enable it run at server boot:
 ```
 systemctl enable ts3server.service
 ```
-##Reboot the server and check if your TeamSpeak server is running:
+####Reboot the server and check if your TeamSpeak server is running:
 ```
 systemctl status ts3server
 ```
-##if you have in the ouput Active: active (running) your server is ready!
+####if you have in the ouput Active: active (running) your server is ready!
 ```
 iptables -A INPUT -p udp --dport 9987 -j ACCEPT
 
@@ -77,4 +77,4 @@ iptables -A INPUT -p tcp --dport 10011 -j ACCEPT
 
 iptables -A INPUT -p tcp --sport 10011 -j ACCEPT
 ```
-##Enjoy your server!
+####Enjoy your server!
