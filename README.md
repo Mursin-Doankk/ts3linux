@@ -64,13 +64,8 @@ systemctl status ts3server
 ```
 #### if you have in the ouput Active: active (running) your server is ready!
 ```
-iptables -A INPUT -p udp --dport 9987 -j ACCEPT
-iptables -A INPUT -p udp --sport 9987 -j ACCEPT
-iptables -A INPUT -p tcp --dport 30033 -j ACCEPT
-iptables -A INPUT -p tcp --sport 30033 -j ACCEPT
-iptables -A INPUT -p tcp --dport 10011 -j ACCEPT
-iptables -A INPUT -p tcp --sport 10011 -j ACCEPT
-iptables -A INPUT -p tcp --dport 41144 -j ACCEPT
-iptables -A INPUT -p tcp --sport 41144 -j ACCEPT
+sudo ufw allow 3033/tcp
+sudo ufw allow 9987/udp
+sudo ufw allow 1011/tcp
 ```
 #### Enjoy your server!
